@@ -17,7 +17,7 @@ public class FormTest extends FeedTest{
 	public void doGet(String a, String b, String expected) throws Exception {
 		
 		CloseableHttpClient client = HttpClients.createDefault();
-		HttpGet request = new HttpGet("http://192.168.119.159:8080/demo/FormServlet?a=" + a + "&b=" + b);
+		HttpGet request = new HttpGet("http://192.168.160.133:8080/demo/FormServlet?a=" + a + "&b=" + b);
 		CloseableHttpResponse response = client.execute(request);
 		String actual = EntityUtils.toString(response.getEntity());
 		System.out.println(actual);
